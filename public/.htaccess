@@ -1,0 +1,11 @@
+# Pretty URLs (optional). The app also works with ?url= directly,
+# so it functions even when mod_rewrite is disabled.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /CoffeeGame_PLT/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+DirectoryIndex index.php

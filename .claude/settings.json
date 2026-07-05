@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"c:/xampp/php/php.exe\" -v)",
+      "Read(//c/xampp/mysql/bin/**)",
+      "Bash(\"c:/xampp/mysql/bin/mysql.exe\" -u root -e \"SELECT VERSION\\(\\);\")",
+      "Bash(\"c:/xampp/mysql/bin/mysql.exe\" -u root)",
+      "Bash(\"c:/xampp/mysql/bin/mysql.exe\" -u root coffee_game -e \"SELECT d.name, GROUP_CONCAT\\(i.name ORDER BY r.step_order SEPARATOR ' + '\\) recipe FROM recipes r JOIN drinks d ON d.id=r.drink_id JOIN ingredients i ON i.id=r.ingredient_id GROUP BY d.id ORDER BY d.unlock_level;\")",
+      "Bash(\"c:/xampp/php/php.exe\" -S 127.0.0.1:8099 -t public)",
+      "Bash(curl -s \"http://127.0.0.1:8099/index.php\" -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s \"http://127.0.0.1:8099/index.php?url=auth/login\")",
+      "Bash(curl -s -c /tmp/cj.txt -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=auth/register\" --data \"username=tester&email=tester@example.com&password=secret1&confirm=secret1\" -o /dev/null -w \"%{http_code} redirect=%{redirect_url}\\\\n\")",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=game\" -o /tmp/game.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=api/state\")",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=api/serve\" -H \"Content-Type: application/json\" --data '{\"drink_code\":\"latte\",\"made\":[\"espresso\",\"milk\"],\"patience\":0.9,\"combo\":0,\"tip_factor\":1}')",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=aiscan/upload\" -F \"image=@public/pic/coffeemascot.jpg\")",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=api/cancel\" -H \"Content-Type: application/json\" --data '{}')",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=api/advanceDay\" -H \"Content-Type: application/json\" --data '{}')",
+      "Bash(curl -s -b /tmp/cj.txt \"http://127.0.0.1:8099/index.php?url=api/revenue\")",
+      "Bash(\"c:/xampp/php/php.exe\" -m)",
+      "Bash(\"c:/xampp/php/php.exe\" -r \"var_dump\\(function_exists\\('mime_content_type'\\), function_exists\\('imagecreatefromstring'\\)\\);\")",
+      "Bash(curl -s -o /dev/null -w \"apache root: %{http_code}\\\\n\" \"http://localhost/CoffeeGame_PLT/public/index.php\")",
+      "Bash(curl -s \"http://localhost/CoffeeGame_PLT/public/index.php?url=auth/login\")",
+      "Bash(npx -v)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(npm install *)",
+      "Bash(rm -f public/uploads/scan_*)",
+      "Bash(\"c:/xampp/mysql/bin/mysql.exe\" -u root coffee_game -e \"SELECT COUNT\\(*\\) AS users FROM users; SELECT COUNT\\(*\\) AS drinks FROM drinks; SELECT COUNT\\(*\\) AS recipes FROM recipes; SELECT COUNT\\(*\\) AS achievements FROM achievements;\")",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"php.exe -S 127.0.0.1:8099\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} -> %{redirect_url}\\\\n\" \"http://localhost/CoffeeGame_PLT/index.php\")",
+      "Bash(curl -s -c /tmp/cj2.txt \"http://localhost/CoffeeGame_PLT/public/index.php?url=auth/register\" --data \"username=player1&email=p1@x.com&password=secret1&confirm=secret1\" -o /dev/null -w \"register: %{http_code} -> %{redirect_url}\\\\n\")",
+      "Bash(curl -s -b /tmp/cj2.txt \"http://localhost/CoffeeGame_PLT/public/index.php?url=game\" -o /dev/null -w \"game: %{http_code}\\\\n\")",
+      "Bash(curl -s -b /tmp/cj2.txt \"http://localhost/CoffeeGame_PLT/public/index.php?url=api/state\" -o /dev/null -w \"api/state: %{http_code}\\\\n\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(curl -s -c /tmp/c3.txt \"http://127.0.0.1:8099/index.php?url=auth/register\" --data \"username=play2&email=p2@x.com&password=secret1&confirm=secret1\" -o /dev/null -w \"register: %{http_code}\\\\n\")",
+      "Bash(curl -s -b /tmp/c3.txt \"http://127.0.0.1:8099/index.php?url=api/setStock\" -H \"Content-Type: application/json\" --data '{\"ingredient\":\"milk\",\"qty\":40}')",
+      "Bash(curl -s -b /tmp/c3.txt \"http://127.0.0.1:8099/index.php?url=api/setStock\" -H \"Content-Type: application/json\" --data '{\"ingredient\":\"milk\",\"qty\":0}')",
+      "Bash(curl -s -b /tmp/c3.txt \"http://127.0.0.1:8099/index.php?url=api/setStock\" -H \"Content-Type: application/json\" --data '{\"ingredient\":\"espresso\",\"qty\":9999}')"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Administrator\\.claude\\projects\\c--xampp-htdocs-CoffeeGame-PLT\\memory"
+    ]
+  }
+}
