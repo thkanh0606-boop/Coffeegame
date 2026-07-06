@@ -6,9 +6,9 @@
 
 // ---- Database ----
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'coffee_game');
-define('DB_USER', 'jindo_plt_coffeegame_plt_pro_vn@coffeegame.plt.pro.vn');
-define('DB_PASS', 'YUU*BB+6E3t;Cwjm');
+define('DB_NAME', 'pltprov1_jindo_plt_coffeegame');
+define('DB_USER', 'pltprov1_jindo_plt_coffeegame');
+define('DB_PASS', 'w1bqM1-ObEof[VCW');
 define('DB_CHARSET', 'utf8mb4');
 
 // ---- App ----
