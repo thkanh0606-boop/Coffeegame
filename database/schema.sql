@@ -4,9 +4,9 @@
 --  Charset: utf8mb4  Engine: InnoDB (foreign keys)
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS coffee_game
+CREATE DATABASE IF NOT EXISTS pltprov1_jindo_plt_coffeegame
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE coffee_game;
+USE pltprov1_jindo_plt_coffeegame;
 
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS ai_scan_history;
