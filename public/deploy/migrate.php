@@ -12,7 +12,7 @@
  * - File này đặt trong /public để truy cập được qua URL, ví dụ: public/deploy/migrate.php
  */
 
-require_once dirname(__DIR__, 2) . '/app/config.php';
+require_once dirname(__DIR__, 2) . '/app/config/config.php';
 
 define('MIGRATE_TOKEN', getenv('MIGRATE_TOKEN') ?: 'CHANGE_ME_TO_A_LONG_RANDOM_SECRET');
 define('SCHEMA_FILE', ROOT_PATH . '/database/schema.sql');
