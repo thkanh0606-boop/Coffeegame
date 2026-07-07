@@ -28,5 +28,5 @@ try {
            . htmlspecialchars($ex->getMessage()) . "\n\n"
            . htmlspecialchars($ex->getFile()) . ':' . $ex->getLine()
            . '</pre>';
-    
+    }
 }
