@@ -27,6 +27,6 @@ try {
            . 'Something broke:' . "\n\n"
            . htmlspecialchars($ex->getMessage()) . "\n\n"
            . htmlspecialchars($ex->getFile()) . ':' . $ex->getLine()
-           . '</pre>'
-    }
+           . '</pre>';
+    
 }
